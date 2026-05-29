@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const API = 'http://127.0.0.1:8000'
+const API = 'https://crm-project-production-7bdf.up.railway.app'
 
 export default function CreateTicket() {
   const [form, setForm] = useState({
