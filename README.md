@@ -22,3 +22,49 @@ A full-stack web application for managing customer support tickets built for the
 - ✅ View ticket details, update status and add notes
 
 ## 📁 Project Structure
+crm-project/
+├── backend/
+│   ├── main.py         # FastAPI routes (4 endpoints)
+│   ├── database.py     # SQLAlchemy models
+│   ├── requirements.txt
+│   └── Procfile
+├── frontend/
+│   └── src/
+│       ├── App.jsx
+│       └── pages/
+│           ├── TicketList.jsx
+│           ├── CreateTicket.jsx
+│           └── TicketDetail.jsx
+└── README.md
+
+## 🚀 Run Locally
+
+### Backend
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+API runs at: http://localhost:8000
+API docs at: http://localhost:8000/docs
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+App runs at: http://localhost:5173
+
+## 🔌 API Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/tickets | Create a new ticket |
+| GET | /api/tickets | List all tickets |
+| GET | /api/tickets/{id} | Get ticket details |
+| PUT | /api/tickets/{id} | Update ticket status/notes |
+
+## 👨‍💻 Built By
+Rohan Bhosale — Datastraw Internship Assessment
